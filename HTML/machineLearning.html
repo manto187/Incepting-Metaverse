@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Machine Learning | Incepting Metaverse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="../CSS/machineLearning.css">
+</head>
+
+<body>
+    <!-- Header -->
+         <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/logo.jpg" alt="Incepting Metaverse logo">
+                <h1>Incepting Metaverse</h1>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search services, solutions...">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults">
+                    <div class="search-result-item" data-url="machineLearning.html">AI & Machine Learning</div>
+                    <div class="search-result-item" data-url="futureTech.html">Futuristic Tech</div>
+                    <div class="search-result-item" data-url="blockChain.html">Web3 & Blockchain</div>
+                    <div class="search-result-item" data-url="metaverse.html">Drifiting into Metaverse</div>
+                    <div class="search-result-item" data-url="startups.html">Startup Bugs</div>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="startups.html">StartUps</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="service.html">Services</a>
+                <a href="product.html">Products</a>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+            
+    <!-- Hero Section -->
+    <section class="ai-hero" id="home">
+        <div class="ai-particles" id="particles"></div>
+        <div class="ai-hero-content">
+            <h1>AI & Machine <span>Learning</span></h1>
+            <p>Explore the fascinating world of artificial intelligence and machine learning through interactive examples and comprehensive explanations. Our team of experts delivers cutting-edge solutions to transform your business.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="introduction" class="visible">
+            <h2>Introduction to AI</h2>
+            <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="AI Concept">
+                    </div>
+                    <div class="card-content">
+                        <h3>What is AI?</h3>
+                        <p>AI systems are designed to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1677442135136-760c813a743d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="History of AI">
+                    </div>
+                    <div class="card-content">
+                        <h3>History of AI</h3>
+                        <p>The field of AI research was founded at a workshop held at Dartmouth College in 1956, where the term "Artificial Intelligence" was coined.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="AI vs ML">
+                    </div>
+                    <div class="card-content">
+                        <h3>AI vs Machine Learning</h3>
+                        <p>Machine learning is a subset of AI that focuses on the development of algorithms that can learn from and make predictions on data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="types">
+            <h2>Types of Artificial Intelligence</h2>
+            <p>AI can be classified in several ways based on its capabilities and functionalities. Here are the main types of artificial intelligence:</p>
+            
+            <div class="demo-container">
+                <h3>AI Classification Demo</h3>
+                <p>Select an AI type to learn more about it:</p>
+                
+                <div class="demo-area">
+                    <select id="aiTypeSelect">
+                        <option value="">Select AI Type</option>
+                        <option value="narrow">Narrow AI (Weak AI)</option>
+                        <option value="general">General AI (Strong AI)</option>
+                        <option value="super">Super AI</option>
+                        <option value="reactive">Reactive Machines</option>
+                        <option value="limited">Limited Memory</option>
+                        <option value="theory">Theory of Mind</option>
+                        <option value="selfaware">Self-aware AI</option>
+                    </select>
+                    
+                    <div class="demo-result" id="aiTypeResult">
+                        <h3 id="aiTypeTitle"></h3>
+                        <p id="aiTypeDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ml-basics">
+            <h2>Machine Learning Basics</h2>
+            <p>Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
+            
+            <div class="demo-container">
+                <h3>Neural Network Visualization</h3>
+                <p>Adjust the parameters to see how a simple neural network works:</p>
+                
+                <div class="input-group">
+                    <div>
+                        <label for="layerCount">Number of Layers:</label>
+                        <input type="range" id="layerCount" min="1" max="5" value="3">
+                        <span id="layerCountValue">3</span>
+                    </div>
+                    
+                    <div>
+                        <label for="neuronCount">Neurons per Layer:</label>
+                        <input type="range" id="neuronCount" min="1" max="10" value="4">
+                        <span id="neuronCountValue">4</span>
+                    </div>
+                    
+                    <button id="generateBtn">Generate Network</button>
+                </div>
+                
+                <div class="visualization" id="networkVisualization"></div>
+            </div>
+            
+            <h3>Types of Machine Learning</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Supervised Learning">
+                    </div>
+                    <div class="card-content">
+                        <h3>Supervised Learning</h3>
+                        <p>The algorithm learns from labeled training data, helping to predict outcomes for unforeseen data.</p>
+                        <button class="learn-more-btn" data-type="supervised">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Unsupervised Learning">
+                    </div>
+                    <div class="card-content">
+                        <h3>Unsupervised Learning</h3>
+                        <p>The algorithm studies data to identify patterns without any labeled responses to guide the learning process.</p>
+                        <button class="learn-more-btn" data-type="unsupervised">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Reinforcement Learning">
+                    </div>
+                    <div class="card-content">
+                        <h3>Reinforcement Learning</h3>
+                        <p>The algorithm learns by interacting with an environment and receiving rewards or penalties for actions.</p>
+                        <button class="learn-more-btn" data-type="reinforcement">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications">
+            <h2>AI Applications</h2>
+            <p>Artificial intelligence has found applications across numerous industries and domains. Here are some of the most impactful applications of AI today:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Healthcare</div>
+                        <p>AI is used for disease detection, drug discovery, personalized treatment plans, and robotic surgery assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Finance</div>
+                        <p>Applications include fraud detection, algorithmic trading, credit scoring, and robo-advisors.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Autonomous Vehicles</div>
+                        <p>Self-driving cars use AI for perception, decision making, and control systems.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Natural Language Processing</div>
+                        <p>AI powers chatbots, virtual assistants, translation services, and sentiment analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Computer Vision</div>
+                        <p>Applications include facial recognition, object detection, and medical image analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future">
+            <h2>The Future of AI</h2>
+            <p>As AI continues to evolve, its impact on society and industry is expected to grow exponentially. Here are some key trends and predictions for the future of artificial intelligence:</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>AI Ethics and Governance</h3>
+                        <p>Increased focus on developing ethical frameworks and regulations to guide AI development and deployment.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>General AI Research</h3>
+                        <p>Continued progress toward developing AI systems with generalized human cognitive abilities.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>AI-Augmented Workforce</h3>
+                        <p>AI will increasingly complement human workers rather than replace them entirely.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>AI FAQ</h3>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Will AI replace human jobs?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>While AI will automate certain tasks, it's more likely to transform jobs rather than eliminate them entirely. Many experts believe AI will create new types of jobs even as it makes some existing ones obsolete.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How close are we to achieving General AI?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Most experts believe we're still decades away from achieving human-level general AI. Current AI systems excel at specific tasks but lack the general reasoning and adaptability of human intelligence.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What are the risks of advanced AI?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Potential risks include job displacement, algorithmic bias, privacy concerns, and in the long term, the challenge of aligning superintelligent AI systems with human values and goals.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="../images/logo.jpg" alt="Incepting Metaverse Logo">
+                    <h2>Incepting Metaverse</h2>
+                </div>
+                <p>Innovative technology solutions for businesses of all sizes. We help you navigate the digital landscape and achieve your goals.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100079229002885"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="www.linkedin.com/in/asad-ameen-7737b1350"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/manto_187?igsh=MW50Ymp5ZWRvNjFtcw=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Services</a></li>
+                    <li><a href="service.html">About Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="machineLearning.html">AI & ML</a></li>
+                    <li><a href="futureTech.html">Futuristic Tech</a></li>
+                    <li><a href="blockChain.html">Web3 & Blockchain</a></li>
+                    <li><a href="metaverse.html">Drifting into Metaverse</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> University of Engineering and Technology Lahore</p>
+                <p><i class="fas fa-phone-alt"></i> +92 3337442333</p>
+                <p><i class="fas fa-envelope"></i> asadameen050@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Incepting Metaverse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      
+    </script>
+    <script src="../JavaScript/machineLearning.js"></script>
+</body>
+</html>
