@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Bugs - Learn from Failure</title>
+    <style>
+       
+</style>
+    <link rel="stylesheet" href="../CSS/startups.css">
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../images/logo.jpg" alt="Incepting Metaverse logo">
+            <h1>Incepting Metaverse</h1>
+        </div>
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search services, solutions...">
+            <i class="fas fa-search search-icon"></i>
+            <div class="search-results" id="searchResults">
+                <div class="search-result-item" data-url="machineLearning.html">AI & Machine Learning</div>
+                <div class="search-result-item" data-url="futureTech.html">Futuristic Tech</div>
+                <div class="search-result-item" data-url="blockChain.html">Web3 & Blockchain</div>
+                <div class="search-result-item" data-url="metaverse.html">Drifting into Metaverse</div>
+                <div class="search-result-item" data-url="startups.html">Startup Bugs</div>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="startups.html">Startups</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="service.html">Services</a>
+            <a href="product.html">Products</a>
+        </nav>
+        <div class="theme-toggle">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+    <section class="hero">
+        <div class="container">
+            <h1>Learn From Startup Failures</h1>
+            <p>Discover why startups fail and get inspired with new ideas. Avoid common pitfalls with our expert analysis and consulting services.</p>
+            <a href="#consultation" class="btn">Book a Consultant</a>
+            <a href="#failures" class="btn btn-outline">View Case Studies</a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Startup Bugs?</h2>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Data-Driven Analysis</h3>
+                    <p>We analyze hundreds of failed startups to identify patterns and common failure points that you can avoid.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Fresh Ideas</h3>
+                    <p>Get inspired with our curated list of innovative startup ideas based on market gaps and emerging trends.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👔</div>
+                    <h3>Expert Consulting</h3>
+                    <p>Our network of experienced entrepreneurs and investors can help guide your startup to success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section case-studies" id="failures">
+        <div class="container">
+            <div class="section-title">
+                <h2>Startup Failure Case Studies</h2>
+            </div>
+            <div class="case-study-grid">
+                <div class="case-study-card">
+                    <div class="case-study-img" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="case-study-content">
+                        <span class="tag">E-commerce</span>
+                        <h3>Quirky - The Crowdsourcing Failure</h3>
+                        <p class="meta">Failed 2015 | $185M raised</p>
+                        <p>Quirky was a crowdsourced invention platform that raised millions but failed due to poor product selection and unsustainable business model.</p>
+                        <a href="#" class="btn" style="margin-top: 1rem; display: inline-block;" onclick="openModal('quirky')">Read Analysis</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-img" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="case-study-content">
+                        <span class="tag">Social Media</span>
+                        <h3>Vine - Acquired Then Shut Down</h3>
+                        <p class="meta">Failed 2016 | Acquired by Twitter</p>
+                        <p>The short-form video app was ahead of its time but failed to monetize and was shut down by Twitter despite having millions of users.</p>
+                        <a href="#" class="btn" style="margin-top: 1rem; display: inline-block;" onclick="openModal('vine')">Read Analysis</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-img" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="case-study-content">
+                        <span class="tag">Food Delivery</span>
+                        <h3>Sprig - The On-Demand Meal Failure</h3>
+                        <p class="meta">Failed 2017 | $56M raised</p>
+                        <p>Sprig offered healthy meal delivery but couldn't overcome the high operational costs of food preparation and last-mile delivery.</p>
+                        <a href="#" class="btn" style="margin-top: 1rem; display: inline-block;" onclick="openModal('sprig')">Read Analysis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ideas-section" id="ideas">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Startup Ideas</h2>
+            </div>
+            <div class="ideas-grid">
+                <div class="idea-card">
+                    <span class="category">Sustainability</span>
+                    <h3>AI-Powered Recycling Optimization</h3>
+                    <p>A platform that uses computer vision to help consumers and businesses properly sort waste, increasing recycling rates and reducing contamination.</p>
+                </div>
+                <div class="idea-card">
+                    <span class="category">Healthcare</span>
+                    <h3>Personalized Mental Health Chatbot</h3>
+                    <p>An AI chatbot that provides personalized mental health support and coping strategies based on user input and mood tracking.</p>
+                </div>
+                <div class="idea-card">
+                    <span class="category">Remote Work</span>
+                    <h3>Virtual Office Space Platform</h3>
+                    <p>A platform that recreates office serendipity with virtual spaces where remote workers can "bump into" colleagues and have spontaneous conversations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="consultation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Consultation Services</h2>
+                <p>Book a session with our expert consultants to review your startup idea or existing business.</p>
+            </div>
+            <div class="consultation-form">
+                <form id="consultationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company/Startup Name</label>
+                            <input type="text" id="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="stage">Business Stage</label>
+                            <select id="stage" required>
+                                <option value="">Select stage</option>
+                                <option value="idea">Just an idea</option>
+                                <option value="prototype">Prototype/ MVP</option>
+                                <option value="early">Early revenue</option>
+                                <option value="growth">Growth stage</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Consultation Service</label>
+                        <select id="service" required>
+                            <option value="">Select service</option>
+                            <option value="review">Idea Review</option>
+                            <option value="pitch">Pitch Deck Review</option>
+                            <option value="strategy">Growth Strategy</option>
+                            <option value="funding">Funding Preparation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">What would you like to discuss?</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-about">
+            <div class="footer-logo">
+                <img src="../images/logo.jpg" alt="Incepting Metaverse Logo">
+                <h2>Incepting Metaverse</h2>
+            </div>
+            <p>Innovative technology solutions for businesses of all sizes. We help you navigate the digital landscape and achieve your goals.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100079229002885"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="www.linkedin.com/in/asad-ameen-7737b1350"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/manto_187?igsh=MW50Ymp5ZWRvNjFtcw=="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="ourStory.html">About Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="machineLearning.html">AI & ML</a></li>
+                <li><a href="futureTech.html">Futuristic Tech</a></li>
+                <li><a href="blockChain.html">Web3 & Blockchain</a></li>
+                <li><a href="metaverse.html">Drifting into Metaverse</a></li>
+                <li><a href="webDev.html">Web Development</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> University of Engineering and Technology Lahore</p>
+            <p><i class="fas fa-phone-alt"></i> +92 3337442333</p>
+            <p><i class="fas fa-envelope"></i> asadameen050@gmail.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Incepting Metaverse. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <!-- Modals for case studies -->
+    <div class="modal" id="quirkyModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('quirkyModal')">&times;</span>
+            <h2>Quirky - The Crowdsourcing Failure</h2>
+            <p><strong>Category:</strong> E-commerce | <strong>Failed:</strong> 2015 | <strong>Funding:</strong> $185M</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">What Was Quirky?</h3>
+            <p>Quirky was a crowdsourced invention platform that allowed community members to submit product ideas, vote on others' ideas, and collaborate on product development. Successful products would be manufactured and sold with revenue shared among contributors.</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Why It Failed</h3>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li><strong>Poor product selection:</strong> Many products had limited market appeal</li>
+                <li><strong>High overhead costs:</strong> Manufacturing and inventory costs were unsustainable</li>
+                <li><strong>Revenue sharing complexity:</strong> The compensation model was difficult to manage</li>
+                <li><strong>Quality control issues:</strong> Some products had technical problems</li>
+            </ul>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Key Takeaways</h3>
+            <ul style="margin-left: 1.5rem;">
+                <li>Crowdsourcing works better for ideation than full product development</li>
+                <li>Physical products have much higher costs than digital ones</li>
+                <li>Community platforms need clear, sustainable monetization</li>
+                <li>Not all user-generated content translates to viable products</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="vineModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('vineModal')">&times;</span>
+            <h2>Vine - Acquired Then Shut Down</h2>
+            <p><strong>Category:</strong> Social Media | <strong>Failed:</strong> 2016 | <strong>Acquired by:</strong> Twitter</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">What Was Vine?</h3>
+            <p>Vine was a short-form video hosting service where users could share six-second-long looping video clips. It gained massive popularity for its creative constraints and was acquired by Twitter before launch.</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Why It Failed</h3>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li><strong>Lack of monetization:</strong> Twitter failed to implement effective revenue streams</li>
+                <li><strong>Competition:</strong> Instagram added video features that surpassed Vine</li>
+                <li><strong>Creator exodus:</strong> Top creators left due to lack of earning potential</li>
+                <li><strong>Corporate neglect:</strong> Twitter didn't invest in needed features and improvements</li>
+            </ul>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Key Takeaways</h3>
+            <ul style="margin-left: 1.5rem;">
+                <li>Acquisition doesn't guarantee success - corporate parents can smother innovation</li>
+                <li>Platforms must provide ways for creators to monetize</li>
+                <li>Feature limitations can be strengths but also constraints</li>
+                <li>First-mover advantage disappears without continuous innovation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="sprigModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('sprigModal')">&times;</span>
+            <h2>Sprig - The On-Demand Meal Failure</h2>
+            <p><strong>Category:</strong> Food Delivery | <strong>Failed:</strong> 2017 | <strong>Funding:</strong> $56M</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">What Was Sprig?</h3>
+            <p>Sprig was an on-demand food delivery service that offered healthy, chef-prepared meals delivered in under 20 minutes. It operated its own kitchens and delivery fleet to control quality and speed.</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Why It Failed</h3>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li><strong>High operational costs:</strong> Running kitchens and delivery was expensive</li>
+                <li><strong>Limited menu:</strong> Few options led to customer fatigue</li>
+                <li><strong>Pricing pressure:</strong> Couldn't compete with cheaper alternatives</li>
+                <li><strong>Complex logistics:</strong> Food preparation and delivery was hard to scale</li>
+            </ul>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Key Takeaways</h3>
+            <ul style="margin-left: 1.5rem;">
+                <li>Vertical integration adds costs that may outweigh benefits</li>
+                <li>Food businesses have notoriously thin margins</li>
+                <li>On-demand services often underestimate operational complexity</li>
+                <li>Customer retention requires constant menu innovation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('successModal')">&times;</span>
+            <h2>Consultation Request Received!</h2>
+            <p style="margin: 1.5rem 0;">Thank you for your interest in Startup Bugs consulting services. Our team will review your request and contact you within 48 hours to schedule your session.</p>
+            <p>In the meantime, check out our <a href="#failures" style="color: var(--accent);">case studies</a> and <a href="#ideas" style="color: var(--accent);">startup ideas</a> for inspiration.</p>
+            <button class="btn" style="margin-top: 1.5rem;" onclick="closeModal('successModal')">Close</button>
+        </div>
+    </div>
+    <script>
+   
+</script>
+
+    <script src="../JavaScript/startups.js"></script>
+</body>
+</html>
