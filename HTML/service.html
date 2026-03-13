@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startups | Innovation Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="../CSS/service.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/logo.jpg" alt="Incepting Metaverse logo">
+                <h1>Incepting Metaverse</h1>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search services, solutions...">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults">
+                    <div class="search-result-item" data-url="machineLearning.html">AI & Machine Learning</div>
+                    <div class="search-result-item" data-url="futureTech.html">Futuristic Tech</div>
+                    <div class="search-result-item" data-url="blockChain.html">Web3 & Blockchain</div>
+                    <div class="search-result-item" data-url="metaverse.html">Drifting into Metaverse</div>
+                    <div class="search-result-item" data-url="startups.html">Startup Bugs</div>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="startups.html">Startups</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="service.html">Services</a>
+                <a href="product.html">Products</a>
+            </nav>
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="hero animate">
+            <h1>Discover the Future of Innovation</h1>
+            <p>Explore groundbreaking startups that are shaping tomorrow's technology and business landscape.</p>
+            <a href="#" class="cta-button" id="join-button">Join Our Network</a>
+        </section>
+
+        <section class="featured-section">
+            <div class="section-title animate">
+                <h2>Featured Startups</h2>
+                <p>Handpicked innovative companies that are making waves in their industries</p>
+            </div>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="fintech">Fintech</button>
+                <button class="filter-btn" data-filter="health">Health</button>
+                <button class="filter-btn" data-filter="sustainability">Sustainability</button>
+            </div>
+
+            <div id="featured-startup" class="featured-startup animate delay-1">
+                <div class="featured-content">
+                    <span class="category">AI Technology</span>
+                    <h2>NeuralMind AI</h2>
+                    <p>Revolutionizing business intelligence with advanced machine learning algorithms that predict market trends with 92% accuracy.</p>
+                    <div class="startup-stats">
+                        <div class="stats-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lahore, Punjab</span>
+                        </div>
+                        <div class="stats-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Founded: 2025</span>
+                        </div>
+                        <div class="stats-item">
+                            <i class="fas fa-users"></i>
+                            <span>25 Employees</span>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button" data-startup="neuralmind">Learn More</a>
+                </div>
+                <div class="featured-image">
+                    <i class="fas fa-brain"></i>
+                </div>
+            </div>
+
+            <div class="section-title animate delay-1">
+                <h2>Emerging Startups</h2>
+                <p>Promising new ventures across various industries</p>
+            </div>
+
+            <div class="spinner" id="loading-spinner"></div>
+
+            <div class="startups-grid" id="startups-grid">
+                <div class="startup-card" data-category="ai">
+                    <div class="startup-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="startup-content">
+                        <h3>RoboTech</h3>
+                        <p>AI-powered robotics solutions for industrial automation and smart manufacturing.</p>
+                        <div class="startup-stats">
+                            <div class="stats-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Karachi, Sindh</span>
+                            </div>
+                            <div class="stats-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+                        </div>
+                        <a href="#" class="cta-button" data-startup="robotech">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="startup-card" data-category="fintech">
+                    <div class="startup-image">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="startup-content">
+                        <h3>PayZen</h3>
+                        <p>Blockchain-based payment solutions for seamless cross-border transactions.</p>
+                        <div class="startup-stats">
+                            <div class="stats-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Peshawar, KPK</span>
+                            </div>
+                            <div class="stats-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+                        </div>
+                        <a href="#" class="cta-button" data-startup="payzen">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="startup-card" data-category="health">
+                    <div class="startup-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="startup-content">
+                        <h3>MediScan AI</h3>
+                        <p>AI diagnostic tools that detect early signs of disease from medical imaging.</p>
+                        <div class="startup-stats">
+                            <div class="stats-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Quetta, Balochistan</span>
+                            </div>
+                            <div class="stats-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+                        </div>
+                        <a href="#" class="cta-button" data-startup="mediscan">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="startup-card" data-category="sustainability">
+                    <div class="startup-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="startup-content">
+                        <h3>GreenBuild</h3>
+                        <p>Sustainable construction materials made from recycled plastics and agricultural waste.</p>
+                        <div class="startup-stats">
+                            <div class="stats-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Multan, Punjab</span>
+                            </div>
+                            <div class="stats-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+                        </div>
+                        <a href="#" class="cta-button" data-startup="greenbuild">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="startup-card" data-category="ai">
+                    <div class="startup-image">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="startup-content">
+                        <h3>LinguaAI</h3>
+                        <p>Real-time translation technology that preserves cultural context and nuance.</p>
+                        <div class="startup-stats">
+                            <div class="stats-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Islamabad, FT</span>
+                            </div>
+                            <div class="stats-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+                        </div>
+                        <a href="#" class="cta-button" data-startup="linguaai">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="startup-card" data-category="fintech">
+                    <div class="startup-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="startup-content">
+                        <h3>WealthSimple AI</h3>
+                        <p>Automated investment platform using machine learning to optimize portfolios.</p>
+                        <div class="startup-stats">
+                            <div class="stats-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rawalpindi, Punjab</span>
+                            </div>
+                            <div class="stats-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2025</span>
+                            </div>
+                        </div>
+                        <a href="#" class="cta-button" data-startup="wealthsimple">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="cta-button" id="load-more" style="display: block; margin: 2rem auto;">Load More Startups</button>
+        </section>
+
+        <section class="newsletter animate delay-2">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest startup news, investment opportunities, and innovation trends.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="../images/logo.jpg" alt="Incepting Metaverse Logo">
+                    <h2>Incepting Metaverse</h2>
+                </div>
+                <p>Innovative technology solutions for businesses of all sizes. We help you navigate the digital
+                    landscape and achieve your goals.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100079229002885"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href="www.linkedin.com/in/asad-ameen-7737b1350"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/manto_187?igsh=MW50Ymp5ZWRvNjFtcw=="><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="ourStory.html">About Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="machineLearning.html">AI & ML</a></li>
+                    <li><a href="futureTech.html">Futuristic Tech</a></li>
+                    <li><a href="blockChain.html">Web3 & Blockchain</a></li>
+                    <li><a href="metaverse.html">Drifting into Metaverse</a></li>
+                    <li><a href="webDev.html">Web Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> University of Engineering and Technology Lahore</p>
+                <p><i class="fas fa-phone-alt"></i> +92 3337442333</p>
+                <p><i class="fas fa-envelope"></i> asadameen050@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> Incepting Metaverse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Startup Detail Modal -->
+    <div class="modal" id="startup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-content">
+                <!-- Modal content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Network Modal -->
+    <div class="modal" id="join-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Join Our Network</h2>
+            <form id="join-form">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem;">Are you a:</label>
+                    <select id="user-type" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--medium-gray);">
+                        <option value="founder">Startup Founder</option>
+                        <option value="investor">Investor</option>
+                        <option value="enthusiast">Tech Enthusiast</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <input type="text" id="join-name" placeholder="Your Name" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--medium-gray); margin-bottom: 0.5rem;">
+                    <input type="email" id="join-email" placeholder="Your Email" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--medium-gray);">
+                </div>
+                <button type="submit" style="width: 100%; padding: 0.8rem; background-color: var(--primary-color); color: white; border: none; border-radius: 6px; cursor: pointer;">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JavaScript/service.js"></script>
+</body>
+</html>
