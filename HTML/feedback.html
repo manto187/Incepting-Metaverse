@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechInsight | Community Feedback Portal</title>
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/feedback.css">
+</head>
+<body>
+    <!-- Welcome Modal -->
+    <div class="modal-overlay" id="welcomeModal">
+        <div class="welcome-modal">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <i class="fas fa-comment-alt welcome-icon"></i>
+            <h2 class="welcome-title">Welcome to TechInsight!</h2>
+            <p class="welcome-text">We'd love to hear your feedback to help us improve our platform. Would you like to share your thoughts with our community?</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="giveFeedbackBtn">
+                    <i class="fas fa-pencil-alt"></i> Give Feedback
+                </button>
+                <button class="btn btn-outline" id="viewFeedbackBtn">
+                    <i class="fas fa-comments"></i> View Community Feedback
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/gopii.jpeg" alt="Incepting Metaverse logo">
+                <h1>Incepting Metaverse</h1>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search services, solutions...">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results" id="searchResults">
+                    <div class="search-result-item" data-url="machineLearning.html">AI & Machine Learning</div>
+                    <div class="search-result-item" data-url="futureTech.html">Futuristic Tech</div>
+                    <div class="search-result-item" data-url="BlocKChain.html">Web3 & Blockchain</div>
+                    <div class="search-result-item" data-url="metaverse.html">Drifiting into Metaverse</div>
+                    <div class="search-result-item" data-url="startups.html">Startup Bugs</div>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="startups.html">Startups</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="service.html">Services</a>
+                <a href="product.html">Products</a>
+            </nav>
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="view">
+                Community Feedback
+                <span class="tab-badge" id="feedbackCountBadge">0</span>
+            </div>
+            <div class="tab" data-tab="submit">
+                <i class="fas fa-plus"></i> Share Feedback
+            </div>
+        </div>
+        
+        <div class="tab-content active" id="viewFeedback">
+            <div class="feedback-controls">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="feedbackSearch" placeholder="Search feedback...">
+                </div>
+                <div class="filter-container" id="feedbackFilters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="bug">Bug Reports</button>
+                    <button class="filter-btn" data-filter="feature">Features</button>
+                    <button class="filter-btn" data-filter="ui">UI/UX</button>
+                    <button class="filter-btn" data-filter="performance">Performance</button>
+                </div>
+            </div>
+            
+            <div class="feedback-list" id="feedbackList">
+                <!-- Feedback cards will be inserted here by JavaScript -->
+            </div>
+            
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-comment-dots empty-state-icon"></i>
+                <h3 class="empty-state-title">No feedback yet</h3>
+                <p class="empty-state-text">Be the first to share your thoughts about our tech platform and help shape its future!</p>
+                <button class="btn btn-primary" id="addFirstFeedback">
+                    <i class="fas fa-plus"></i> Share Your Feedback
+                </button>
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons will be inserted here by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="submitFeedback">
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <span>Thank you for your feedback! It's now visible to the community.</span>
+            </div>
+            
+            <form id="feedbackForm" class="feedback-form">
+                <h2 class="form-title">Share Your Experience</h2>
+                
+                <div class="profile-pic-container">
+                    <div class="profile-pic-preview" id="profilePicPreview">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-pic-upload">
+                        <label>Profile Picture <span class="label-optional">(optional)</span></label>
+                        <input type="file" id="profilePicInput" accept="image/*">
+                        <label for="profilePicInput" class="profile-pic-upload-btn">
+                            <i class="fas fa-upload"></i> Choose Image
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Your Name <span class="label-optional">(or use "Anonymous")</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="label-optional">(optional)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label>How would you rate your experience?</label>
+                    <div class="rating-container" id="ratingContainer">
+                        <i class="fas fa-star rating-star" data-rating="1"></i>
+                        <i class="fas fa-star rating-star" data-rating="2"></i>
+                        <i class="fas fa-star rating-star" data-rating="3"></i>
+                        <i class="fas fa-star rating-star" data-rating="4"></i>
+                        <i class="fas fa-star rating-star" data-rating="5"></i>
+                    </div>
+                    <div class="rating-labels">
+                        <span>Poor</span>
+                        <span>Excellent</span>
+                    </div>
+                    <input type="hidden" id="rating" name="rating" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackType">Type of Feedback</label>
+                    <select id="feedbackType" name="feedbackType" required>
+                        <option value="">Select feedback type</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="ui">UI/UX Suggestion</option>
+                        <option value="performance">Performance Issue</option>
+                        <option value="general">General Feedback</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Feedback</label>
+                    <textarea id="message" name="message" placeholder="Please share your detailed feedback about our tech platform..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="contactPermission" id="contactPermission">
+                        I'm open to being contacted about this feedback
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-paper-plane"></i> Submit Feedback
+                </button>
+            </form>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="../images/logo.jpg" alt="Incepting Metaverse Logo">
+                    <h2>Incepting Metaverse</h2>
+                </div>
+                <p>Innovative technology solutions for businesses of all sizes. We help you navigate the digital landscape and achieve your goals.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100079229002885"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="www.linkedin.com/in/asad-ameen-7737b1350"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/manto_187?igsh=MW50Ymp5ZWRvNjFtcw=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="ourStory.html">About Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="machineLearning.html">AI & ML</a></li>
+                    <li><a href="futureTech.html">Futuristic Tech</a></li>
+                    <li><a href="blockChain.html">Web3 & Blockchain</a></li>
+                    <li><a href="metaverse.html">Drifting into Metaverse</a></li>
+                    <li><a href="webDev.html">Web Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> University of Engineering and Technology Lahore</p>
+                <p><i class="fas fa-phone-alt"></i> +92 3337442333</p>
+                <p><i class="fas fa-envelope"></i> asadameen050@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Incepting Metaverse. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../JavaScript/feedback.js"></script>
+</body>
+</html>
